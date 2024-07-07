@@ -2,7 +2,6 @@ import * as fs from 'fs';
 import { getPassword } from '../utils/passwordEntering';
 
 export const TABLE_NAME = 'kusanagi_2029';
-export const DATABASE_URL = 'postgres://postgres:root@localhost:5432/postgres';
 
 const USER_PASSWORD = getPassword('Input the password for connection to Yandex.cloud\nUser: Kusanagi-2029: \nHis Password: ');
 console.log(`Вы ввели: ${USER_PASSWORD}`);
