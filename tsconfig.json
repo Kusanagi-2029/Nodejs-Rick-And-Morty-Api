@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ES6", // Определяет версию ECMAScript, к которой будет транспилироваться TypeScript.
+        "module": "commonjs", // Определяет формат модулей, который будет использоваться в сгенерированных JavaScript файлах.
+        "strict": true, // Включает строгий режим TypeScript, включающий все строгие проверки (например, типы, null, undefined).
+        "alwaysStrict": true, // Всегда включает строгий режим в генерируемом JavaScript коде.
+        "esModuleInterop": true, // Упрощает импорт модулей CommonJS в TypeScript.
+        "skipLibCheck": true, // Позволяет пропустить проверку объявлений файлов .d.ts, ускоряя процесс компиляции.
+        "outDir": "./dist", // Определяет папку, в которую будут компилироваться JavaScript файлы.
+        "forceConsistentCasingInFileNames": true, // Гарантирует, что при сравнении имен файлов учитывается регистр.
+        "baseUrl": "./src", // Определяет базовый путь для разрешения модулей.
+        "paths": {
+            "*": [
+                "./node_modules/*", // Путь для разрешения модулей из node_modules.
+                "./src/types/*" // Путь для разрешения пользовательских типов из ./src/types.
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.ts", // Включает все файлы TypeScript из папки src и её подпапок для компиляции.
+        //"src/tests/unit/**/*.ts" // вкл/выкл, чтобы tsconfig обновил информацию про тесты
+    ],
+    "exclude": [
+        "node_modules" // Исключает папку node_modules из компиляции TypeScript.
+    ]
+}
